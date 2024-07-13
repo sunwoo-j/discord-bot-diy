@@ -105,8 +105,6 @@ class Interface(commands.Cog):
     async def new_command(self, interaction: discord.Interaction):
         await interaction.response.send_message("새로 만들어졌어요.")
 
-
-        
 async def setup(bot):
     await bot.add_cog(Interface(bot))
     

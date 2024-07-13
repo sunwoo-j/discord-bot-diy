@@ -72,10 +72,10 @@ async def multiply(interaction: discord.Interaction, 정수1: int, 정수2: int)
     await interaction.response.send_message(f"결과는 {product}입니다.")
 
 @bot.tree.command(name='참가일', description="멤버의 서버 참가 날짜를 알려줍니다")
-@app_commands.describe(member="조회할 멤버")
-async def joined(interaction: discord.Interaction, member: discord.Member):
-    join_date = member.joined_at.strftime("%Y-%m-%d")
-    await interaction.response.send_message(f"{member.display_name}님은 {join_date}에 서버에 참가했습니다.")
+@app_commands.describe(멤버="조회할 멤버")
+async def joined(interaction: discord.Interaction, 멤버: discord.Member):
+    join_date = 멤버.joined_at.strftime("%Y-%m-%d")
+    await interaction.response.send_message(f"{멤버.display_name}님은 {join_date}에 서버에 참가했습니다.")
 
 @bot.tree.context_menu(name="참가일")
 async def joined_user_menu(interaction: discord.Interaction, member: discord.Member):
